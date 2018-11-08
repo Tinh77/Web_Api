@@ -23,6 +23,7 @@ function postLoginRequest(jsonData) {
     xmlHttpRequest.onreadystatechange = function () {
         if(this.readyState == 4 && this.status == 201){
             var member = JSON.parse(this.responseText);
+            localStorage.setItem('token', member.token);
         }
     }
     xmlHttpRequest.open('POST', LOGIN_API, true);
