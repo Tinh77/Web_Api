@@ -2,7 +2,7 @@ getMusic();
 var music_content = document.getElementById("content");
 
 function getMusic() {
-    var APIurl = "https://2-dot-backup-server-002.appspot.com/_api/v2/songs";
+    var APIurl = "https://2-dot-backup-server-002.appspot.com/_api/v2/songs/get-free-songs";
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
