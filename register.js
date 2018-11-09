@@ -7,7 +7,6 @@ if (btnSubmit != null){
         var txtpassword = document.forms['register-form']['password'];
         var txtemail = document.forms['register-form']['email'];
         var txtaddress = document.forms['register-form']['address'];
-        var txtintroduction = document.forms['register-form']['introduction'];
         var txtavatar = document.forms['register-form']['avatar'];
         var txtgender = document.forms['register-form']['gender'];
         var txtphone = document.forms['register-form']['phone'];
@@ -19,7 +18,6 @@ if (btnSubmit != null){
             var address = txtaddress.value;
             var phone = txtphone.value;
             var avatar = txtavatar.value;
-            var introduction = txtintroduction.value;
             var gender = txtgender.value;
             var email = txtemail.value;
             var birth = txtbirthday.value;
@@ -31,7 +29,6 @@ if (btnSubmit != null){
                 address: address,
                 phone: phone,
                 avatar: avatar,
-                introduction: introduction,
                 gender: gender,
                 email: email,
                 birthday: birth,

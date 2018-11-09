@@ -1,9 +1,9 @@
 var LOGIN_API = "https://2-dot-backup-server-002.appspot.com/_api/v2/members/authentication";
-var btnSubmit = document.forms['register-form']['btn-submit'];
+var btnSubmit = document.forms['form-login']['btn-login'];
 if (btnSubmit != null){
     btnSubmit.onclick = function () {
-        var txtEmail = document.forms['register-form']['email'];
-        var txtPassword = document.forms['register-form']['password'];
+        var txtEmail = document.forms['form-login']['email'];
+        var txtPassword = document.forms['form-login']['password'];
         if (txtEmail != null && txtPassword != null){
             var email = txtEmail.value;
             var password = txtPassword.value;
