@@ -47,6 +47,7 @@ function postRegisterData(jsonData) {
     xmlHttpRequest.onreadystatechange = function () {
         if(this.readyState == 4 && this.status == 201){
             var member = JSON.parse(this.responseText);
+            alert("Bạn đã đăng kí thành công");
         }
     }
     xmlHttpRequest.open('POST', REGISTER_API, true);
