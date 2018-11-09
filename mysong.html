@@ -1,87 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Play with mp3</title>
-    <style>
-        * {
-            font-family: Tahoma;
-            margin: 7px;
-        }
-        .song-item {
-            border: 1px solid rgba(13,23,20,0.2);
-            border-radius: 10px;
-        }
-        .song-item:after {
-            content: '';
-            clear: both;
-            display: table;
-        }
-        .song-index {
-            float: left;
-            width: 5%;
-            font-size: 30px;
-            font-weight: bold;
-            text-align: center;
-            padding-top: 2%;
-            padding-left: 1%;
-        }
-        .song-thumbnail {
-            float: left;
-            width: 10%;
-        }
-        .song-thumbnail img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        .song-infor {
-            padding-top: 1%;
-            float: left;
-            width: 20%;
-        }
-        .song-infor .song-name {
-            font-weight: bold;
-        }
-        .song-infor .song-singer {
-            font-weight: lighter;
-            color: rgba(0,0,23,0.47);
-        }
-        .song-control {
-            padding-top: 3%;
-            color: dodgerblue;
-            cursor: pointer;
-            text-decoration: underline;
-            float: left;
-            width: 10%;
-        }
-
-        .song-detail {
-            float: left;
-            width: 50%;
-            padding-top: 0.5%;
-            font-weight: bold;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <title>ZingMp3.5</title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-<h1>Song i like</h1>
-<div class="song-player">
-    <div class="song-detail">
-        <marquee behavior="scroll" direction="left">
-            <div class="current-song-title">
-                <span id="current-play-title"></span>
+<header>
+    <div class="container">
+        <div class="nav-bar">
+            <div class="logo">
+                <a href="the-latest-song.html">
+                    <img src="http://img7.downloadapk.net/7/e8/ba0e90_0.png"  height="40" width="40"/>
+                </a>
             </div>
-        </marquee>
+            <div class="search-text">
+                <input  type="text" placeholder="Nhập nội dung cần tìm">
+            </div>
+            <div class="nav-item">
+                <label>
+                    <div class="dropdown">
+                        <button class="dropbtn">Mp3 cuatui</button>
+                        <div class="dropdown-content">
+                            <a href="mysong.html">Bài hát của tui</a>
+                            <a href="songform.html">Tạo mới bài hát</a>
+                        </div>
+                    </div>
+                </label>
+                <label><a href="login.html">Đăng nhập</a></label>
+                <label><a href="register.html">Đăng kí</a></label>
+            </div>
+        </div>
     </div>
-    <div class="player">
-        <audio controls id="my-mp3" autoplay>
-            <source src="" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
+</header>
+<marquee behavior="scroll" direction="left">
+    <div class="current-song-title">
+        <span id="current-play-title"></span>
     </div>
+</marquee>
+<div id="content">
+    <div class="container">
+
+    </div>
+</div>
+<div class="player">
+    <audio controls id="my-mp3" autoplay>
+        <source src="" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
 </div>
 
-<div class="list-song" id="list-song">
-</div>
 <script src="mysong.js"></script>
 </body>
 </html>

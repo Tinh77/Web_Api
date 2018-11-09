@@ -10,11 +10,8 @@ function getMusic() {
             var obj = JSON.parse(xmlHttp.responseText);
             for (var i = 0; i < obj.length; i++) {
                 var music_item = '<div class="container">';
-                music_item += '<div class="content" >';
-                music_item += '<div>';
-                music_item += '<h3 class="stt">'+ (i+1) +'</h3>';
-                music_item += '</div>';
-                music_item += '<div class="thumbnail" onclick="playSong(\''+obj[i].link +'\')" style="background-image: url('+ obj[i].thumbnail +')"></div>';
+                music_item += '<div class="content" onclick="playSong(\'' + obj[i].link + '\', \'' + obj[i].name + '\', \'' + obj[i].singer + '\')" >';
+                music_item += '<div class="thumbnail" style="background-image: url('+ obj[i].thumbnail +')"></div>';
                 music_item += '<div class="info-song">';
                 music_item += '<p class="name-song"> '+obj[i].name +'</p>';
                 music_item += '<p class="singer">'+ obj[i].singer+'</p>';
@@ -36,6 +33,7 @@ function getMusic() {
     xmlHttp.setRequestHeader('Authorization','Basic ' + localStorage.getItem('token'));
     xmlHttp.send();
 }
-function playSong(link) {
-    document.getElementById('play').src = link;
+function playSong(link, name, singer) {
+    document.getElementById('my-mp3').src = link;
+    document.getElementById('current-play-title').innerHTML = 'Current playing: ' + name + " - " + singer;
 }

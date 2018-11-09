@@ -11,7 +11,7 @@
     <div class="container">
         <div class="nav-bar">
             <div class="logo">
-                <a href="#">
+                <a href="the-latest-song.html">
                     <img src="http://img7.downloadapk.net/7/e8/ba0e90_0.png"  height="40" width="40"/>
                 </a>
             </div>
@@ -19,26 +19,37 @@
                 <input  type="text" placeholder="Nhập nội dung cần tìm">
             </div>
             <div class="nav-item">
-                <label><a href="#">MP3</a></label>
-                <label><a href="#">NewMusic</a></label>
-                <label><a href="#">Social</a></label>
-                <label><a href="#">NewMusic</a></label>
-                <label><a href="#">Social</a></label>
+                <label>
+                    <div class="dropdown">
+                        <button class="dropbtn">Mp3 cuatui</button>
+                        <div class="dropdown-content">
+                            <a href="mysong.html">Bài hát của tui</a>
+                            <a href="songform.html">Tạo mới bài hát</a>
+                        </div>
+                    </div>
+                </label>
+                <label><a href="login.html">Đăng nhập</a></label>
+                <label><a href="register.html">Đăng kí</a></label>
             </div>
         </div>
     </div>
 </header>
-<h3>BẢNG XẾP HẠNG</h3>
+<marquee behavior="scroll" direction="left">
+    <div class="current-song-title">
+        <span id="current-play-title"></span>
+    </div>
+</marquee>
 <div id="content">
     <div class="container">
 
     </div>
 </div>
-
-<audio id="play" controls autoplay="autoplay">
-    <source src="" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
+<div class="player">
+    <audio controls id="my-mp3" autoplay>
+        <source src="" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</div>
 
 <script src="the-latest-song.js"></script>
 </body>

@@ -24,6 +24,7 @@ function postLoginRequest(jsonData) {
         if(this.readyState == 4 && this.status == 201){
             var member = JSON.parse(this.responseText);
             localStorage.setItem('token', member.token);
+            location.href = "the-latest-song";
         }
     }
     xmlHttpRequest.open('POST', LOGIN_API, true);
